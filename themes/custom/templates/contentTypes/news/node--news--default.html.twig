@@ -1,0 +1,23 @@
+<div class="banner">
+  <a href="{{ url }}" rel="bookmark" title="{{ label|field_value[0]['#context'].value }}">
+      {{ content.field_news_banner|field_value }}
+  </a>
+</div>
+<div class="contents">
+  <h2 class="title m0"><a href="{{ url }}" rel="bookmark" title="{{ label|field_value[0]['#context'].value }}">{{ label }}</a></h2>
+  <div class="extra-info">
+    <div class="published-date">
+      <span>{% trans %}last update: {{ date }}{% endtrans %}</span>
+      {{ metadata }}
+    </div>
+    <div class="category">
+      <span class="label">{{ content.field_category|field_label }}</span><span class="items">{{ content.field_category|field_value|safe_join(' - ') }}</span>
+    </div>
+  </div>
+  <div class="summary">
+    <p>
+        {{ content.field_news_summary|field_value }}
+    </p>
+  </div>
+</div>
+

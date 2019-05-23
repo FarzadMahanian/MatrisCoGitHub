@@ -1,0 +1,107 @@
+/*
+ * icons helpers
+**/
+@mixin icon($position: before, $icon: false, $size: 1em, $set: 'Icons', $styles: true) {
+    $here: false;
+    @if $position == both {
+        $position: 'before, &:after';
+    }
+    @if $position == here {
+        $position: 'before';
+        $here: true;
+        position: relative;
+    }
+    // Either a :before or :after pseudo-element, or both, defaulting to :before
+    &:#{$position} {
+        @if $here {
+            position: absolute;
+            bottom: 15px;
+            right: 5px;
+        }
+        @if $icon {
+            // A particular icon has been specified
+            content: "#{map-get($icons, $icon)}";
+        }
+        @if $styles {
+            // Supportive icon styles required
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-family: $set;
+        }
+        @if $size {
+            font-size: $size;
+        }
+        margin: 0 5px;
+        // Include any extra rules supplied for the pseudo-element
+        @content;
+    }
+}
+
+/*
+ * fonts helpers
+**/
+@mixin font-family($type: light) {
+    @if $type == normal {
+        /*rtl:remove*/
+        font-family: Roboto, Tahoma, Arial, Sans-Serif !important;
+        /*rtl:raw:
+        font-family: IranSans, Tahoma, Arial, Sans-Serif !important;
+        */
+    }
+    @if $type == light {
+        /*rtl:remove*/
+        font-family: RobotoLight, Tahoma, Arial, Sans-Serif !important;
+        /*rtl:raw:
+        font-family: IranSansLight, Tahoma, Arial, Sans-Serif !important;
+        */
+    }
+    @if $type == bold {
+        /*rtl:remove*/
+        font-family: RobotoBold, Tahoma, Arial, Sans-Serif !important;
+        /*rtl:raw:
+        font-family: IranSansBold, Tahoma, Arial, Sans-Serif !important;
+        */
+    }
+}
+
+/*
+ * padding and margin helpers
+**/
+$dirs: (top, right, bottom, left);
+$sizes: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+@each $size in $sizes {
+    .p#{$size} {
+        padding: $size+px !important;
+    }
+    .m#{$size} {
+        margin: $size+px !important;
+    }
+
+    @each $dir in $dirs {
+        .p#{str-slice($dir,1,1)}#{$size} {
+            padding-#{$dir}: $size+px !important;
+        }
+        .m#{str-slice($dir,1,1)}#{$size} {
+            margin-#{$dir}: $size+px !important;
+        }
+    }
+
+    .ptb#{$size} {
+        padding-top: $size+px !important;
+        padding-bottom: $size+px !important;
+    }
+    .mtb#{$size} {
+        margin-top: $size+px !important;
+        margin-bottom: $size+px !important;
+    }
+
+    .plr#{$size} {
+        padding-left: $size+px !important;
+        padding-right: $size+px !important;
+    }
+    .mlr#{$size} {
+        margin-left: $size+px !important;
+        margin-right: $size+px !important;
+    }
+}

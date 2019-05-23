@@ -1,0 +1,31 @@
+<div id="products-page" class="ui stackable two column grid">
+    <div id="filter-section" class="four wide column">
+
+        <div id="title-filter" class="filter-section">
+            <h2 class="ui dividing header">{{ 'Filter' | t }}</h2>
+            <div class="ui fluid icon input">
+                <input maxlength="100" id="title-filter-input" type="text" placeholder="{{ 'Product Name' | t }}">
+                <i class="search icon"></i>
+            </div>
+        </div>
+
+        <div id="brands-filter" class="filter-section">
+            <h2 class="ui dividing header">{{ 'Brands' | t }}</h2>
+            {{ drupal_view('taxonomies', 'product_brands_filter') }}
+        </div>
+
+        <div id="category-filter" class="filter-section">
+            <h2 class="ui dividing header">{{ 'Category' | t }}</h2>
+            {{ drupal_view('taxonomies', 'product_categories_filter') }}
+        </div>
+
+        <div id="series-filter" class="filter-section">
+            <h2 class="ui dividing header">{{ 'Series' | t }}</h2>
+            {{ drupal_view('taxonomies', 'product_series_filter') }}
+        </div>
+    </div>
+
+    <div id="products-section" class="twelve wide column">
+        {{ drupal_view('products', 'products_block') }}
+    </div>
+</div>

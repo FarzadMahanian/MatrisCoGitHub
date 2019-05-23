@@ -1,0 +1,12 @@
+<div class="supplier contents" style="background-image: url('{{ file_url(node.field_image.entity.fileuri) }}')">
+    <div class="ui left corner massive label">
+        {{ content.field_logo|field_value }}
+    </div>
+    <a class="link" href="{{ node.field_link[0].url }}" target="_blank">
+        <div class="body">
+            <h2 class="title">{{ label|field_value }}</h2>
+
+            {{ content.body|field_value }}
+        </div>
+    </a>
+</div>

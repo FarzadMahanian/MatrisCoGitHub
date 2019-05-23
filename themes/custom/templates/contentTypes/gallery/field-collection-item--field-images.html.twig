@@ -1,0 +1,24 @@
+{% set galleries = '' %}
+{% for gallery in content.field_gallery|field_value %}
+    {% if loop.index == content.field_gallery|field_value|length %}
+        {% set galleries = galleries ~ '"' ~ gallery['#plain_text'] ~ '"' %}
+    {% else %}
+        {% set galleries = galleries ~ '"' ~ gallery['#plain_text'] ~ '",' %}
+    {% endif %}
+{% endfor %}
+{% set dataGroups = '[' ~ galleries ~ ']' %}
+{% set dataTitle = content.field_gallery|field_value|safe_join(' - ') %}
+
+<div class="column picture-item" {{ attributes.setAttribute('data-groups', dataGroups) }} {{ attributes.setAttribute('data-title', dataTitle) }} onclick="showGalleryModal(this)">
+  <figure>
+    <div class="aspect aspect--16x9">
+      <div class="aspect__inner">
+        <img src={{ file_url(content.field_image['#items'].entity.uri.value) }}
+             alt={{ content.field_description|field_value }} />
+      </div>
+    </div>
+    <figcaption>{{ content.field_gallery|field_value|safe_join(' - ') }}</figcaption>
+  </figure>
+</div>
+
+

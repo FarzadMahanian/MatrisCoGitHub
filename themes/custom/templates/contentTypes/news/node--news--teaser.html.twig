@@ -1,0 +1,13 @@
+<a href="{{ url }}" class="news-block" style="background-image: url('{{ file_url(node.field_news_banner.entity.fileuri) }}')" title="{{ label|field_value[0]['#context'].value }}">
+    <div class="news-content">
+        {% if not page %}
+            <h2 class="title">{{ label }}</h2>
+        {% endif %}
+
+        {% if display_submitted %}
+            <div class="published-date">
+                <span>{% trans %}last update: {{ date }}{% endtrans %}</span>
+            </div>
+        {% endif %}
+    </div>
+</a>

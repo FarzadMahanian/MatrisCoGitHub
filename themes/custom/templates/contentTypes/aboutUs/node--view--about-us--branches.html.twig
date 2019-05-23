@@ -1,0 +1,7 @@
+<div class="google-map-item"
+     priority="{{ content.field_priority|field_value }}"
+     lat="{{ content.field_latitude|field_value }}"
+     lng="{{ content.field_longitude|field_value }}"
+     title="{{ label|field_value }}"
+     body="{{ content.body|field_value }}" image="{{ file_url(node.field_image.entity.fileuri) }}">
+</div>

@@ -1,0 +1,118 @@
+@import 'fontvars';
+$fpath: '../fonts/';
+
+$fontello-font-path : "../fonts/fontello/font";
+$fontello-font-name : "fontello";
+@import "../../../node_modules/fontello-sass/fontello";
+@mixin fontello-content( $code, $position:before ) {
+  $content: "\"\\#{$code}\"";
+  &:#{$position} {
+    content: unquote($content);
+    margin: 0 0.3em;
+  }
+}
+
+$name: 'ionicons/ionicons';
+@font-face {
+  font-family: 'Icons';
+  src: url('#{$fpath}#{$name}.otf');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff');
+}
+
+$name: 'iranSans/IranSans';
+@font-face {
+  font-family: 'IranSans';
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+$name: 'iranSans/IranSansLight';
+@font-face {
+  font-family: 'IranSansLight';
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+$name: 'iranSans/IranSansBold';
+@font-face {
+  font-family: 'IranSansBold';
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+$name: 'OpenSans/OpenSans';
+@font-face {
+  font-family: 'OpenSans';
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+$name: 'OpenSans/OpenSansLight';
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+$name: 'OpenSans/OpenSansBold';
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+$name: 'Roboto/Roboto';
+@font-face {
+  font-family: 'Roboto';
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.eot') format('eot'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+$name: 'Roboto/RobotoLight';
+@font-face {
+  font-family: 'RobotoLight';
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.eot') format('eot'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+$name: 'Roboto/RobotoBold';
+@font-face {
+  font-family: 'RobotoBold';
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.eot') format('eot'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');

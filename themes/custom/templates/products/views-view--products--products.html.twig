@@ -1,0 +1,82 @@
+<div id="products-page" class="ui stackable two column grid">
+    <div id="filter-section" class="four wide column">
+
+        <div id="title-filter" class="filter-section">
+            <h2 class="ui dividing header">{{ 'Filter' | t }}</h2>
+            <div class="ui fluid icon input">
+                <input maxlength="100" id="title-filter-input" type="text" placeholder="{{ 'Product Name' | t }}">
+                <i class="search icon"></i>
+            </div>
+        </div>
+
+        <div id="brands-filter" class="filter-section">
+            <h2 class="ui dividing header">{{ 'Brands' | t }}</h2>
+            {{ drupal_view('taxonomies', 'product_brands_filter') }}
+        </div>
+
+        <div id="category-filter" class="filter-section">
+            <h2 class="ui dividing header">{{ 'Category' | t }}</h2>
+            {{ drupal_view('taxonomies', 'product_categories_filter') }}
+        </div>
+
+        <div id="series-filter" class="filter-section">
+            <h2 class="ui dividing header">{{ 'Series' | t }}</h2>
+            {{ drupal_view('taxonomies', 'product_series_filter') }}
+        </div>
+    </div>
+
+    <div id="products-section" class="twelve wide column">
+        <div class="ui stackable three column grid my-shuffle-container">
+            {{ rows }}
+
+            <div class="col-1@sm my-sizer-element"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{#<div id="products-page" class="">#}
+
+    {#<div id="filter-section" class="row">#}
+        {#<div class="ui stackable four column grid">#}
+            {#<div class="column">#}
+                {#<div id="title-filter" class="filter-section">#}
+                    {#<h2 class="ui dividing header">{{ 'Filter' | t }}</h2>#}
+                    {#<div class="ui fluid icon input">#}
+                        {#<input maxlength="100" id="title-filter-input" type="text" placeholder="{{ 'Product ame' | t }}">#}
+                        {#<i class="search icon"></i>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="column">#}
+                {#<div id="brands-filter" class="filter-section">#}
+                    {#<h2 class="ui dividing header">{{ 'Brands' | t }}</h2>#}
+                    {#{{ drupal_view('taxonomies', 'product_brands') }}#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="column">#}
+                {#<div id="category-filter" class="filter-section">#}
+                    {#<h2 class="ui dividing header">{{ 'Category' | t }}</h2>#}
+                    {#{{ drupal_view('taxonomies', 'product_categories') }}#}
+                {#</div>#}
+            {#</div>#}
+            {#<div class="column">#}
+                {#<div id="series-filter" class="filter-section">#}
+                    {#<h2 class="ui dividing header">{{ 'Series' | t }}</h2>#}
+                    {#{{ drupal_view('taxonomies', 'product_series') }}#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+
+    {#<div id="products-section" class="rew">#}
+        {#<h1 class="ui dividing header page-title">{{ 'Products' | t }}</h1>#}
+        {#<div class="ui stackable three column grid my-shuffle-container">#}
+            {#{{ rows }}#}
+
+            {#<div class="col-1@sm my-sizer-element"></div>#}
+        {#</div>#}
+    {#</div>#}
+{#</div>#}

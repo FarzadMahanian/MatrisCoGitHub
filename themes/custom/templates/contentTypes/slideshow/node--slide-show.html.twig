@@ -1,0 +1,29 @@
+<div class="slideshow-ctr">
+    {#<img src="{{ file_url(node.field_slider.entity.fileuri) }}" title="{{ node.field_slider.title }}" alt="{{ node.field_slider.alt }}" class="slider-image">#}
+    {{ content.field_slider|field_value }}
+    <div class="content {{ content.field_description_position | field_value }}-position">
+        <h2 class="title" {% if node.body.summary|length > 0 %} style="margin-bottom: -10px" {% endif %}>
+            <a class="slider-link" href="{{ node.field_link[0].url }}" title="{{ label|field_value[0]['#context'].value }}">
+                {{ label }}
+            </a>
+        </h2>
+        {% if node.body.summary|length > 0 %}
+            <div class="summary">{{ node.body.summary }}</div>
+        {% endif %}
+        <div class="description">
+            {{ content.body }}
+
+            {% if node.field_link[0].url %}
+
+                <a class="slider-link" href="{{ node.field_link[0].url }}" title="{{ label|field_value[0]['#context'].value }}">
+                    <div class="tiny ui right floated labeled icon button">
+                        <i class="right arrow icon"></i>
+                        <span>{{ 'read more' | t }}</span>
+                    </div>
+                </a>
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+

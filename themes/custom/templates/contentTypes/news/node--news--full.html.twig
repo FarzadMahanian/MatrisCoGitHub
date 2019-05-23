@@ -1,0 +1,20 @@
+<div class="ui raised segment each-news-page">
+
+    <div class="banner">
+        {{ content.field_news_banner|field_value }}
+    </div>
+
+    <div class="extra-info">
+        <div class="published-date">
+            <span>{% trans %}last update: {{ date }}{% endtrans %}</span>
+            {{ metadata }}
+        </div>
+        <div class="category">
+            <span class="label">{{ content.field_category|field_label }}</span><span class="items">{{ content.field_category|field_value|safe_join(' - ') }}</span>
+        </div>
+    </div>
+
+    <div class="content">
+        {{ content.body }}
+    </div>
+</div>

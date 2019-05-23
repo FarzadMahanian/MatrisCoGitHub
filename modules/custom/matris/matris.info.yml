@@ -1,0 +1,7 @@
+name: Matris Module
+description: Custom Module for Services.
+package: MatrisCo
+
+type: module
+core: 8.x
+

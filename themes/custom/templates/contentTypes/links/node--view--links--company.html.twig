@@ -1,0 +1,14 @@
+
+{% if content.field_icon|field_value %}
+  <a href="{{ node.field_link[0].url }}" class="link">
+    <span class="icon {{ content.field_icon|field_value }}"></span>
+  </a>
+{% endif %}
+
+{% if content.field_image|field_value %}
+  <a href="{{ node.field_link[0].url }}" class="link-image">
+      {{ content.field_image|field_value }}
+  </a>
+{% endif %}
+<h2 class="title">{{ label }}</h2>
+<p class="body">{{ content.body }}</p>

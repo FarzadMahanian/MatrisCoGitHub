@@ -1,0 +1,11 @@
+<div class="catalog contents" style="background-image: url('{{ file_url(node.field_image.entity.fileuri) }}')">
+    <div class="ui left corner massive label">
+        <i class="download icon"></i>
+    </div>
+    <a class="link" href="{{ file_url(node.field_file.entity.uri.value) }}" target="_blank">
+        <div class="body">
+            <h2 class="title">{{ label|field_value }}</h2>
+            {{ content.body|field_value }}
+        </div>
+    </a>
+</div>

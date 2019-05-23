@@ -1,0 +1,16 @@
+{% set classes = [
+'products-categorization-cell'
+] %}
+<article{{ attributes.addClass(classes) }}>
+    <h2 class="title">{{ label }}</h2>
+    <div class="inner-column" style="background-image: url('{{ file_url(node.field_image.entity.fileuri) }}')"
+         modal="{{ label|field_value[0]['#context'].value }}">
+        <div class="ui large modal products-categorization-modal">
+            <i class="close icon"></i>
+            <div class="header">{{ label|field_value[0]['#context'].value }}</div>
+            <div class="scrolling content">
+                {{ content.field_items|field_value }}
+            </div>
+        </div>
+    </div>
+</article>

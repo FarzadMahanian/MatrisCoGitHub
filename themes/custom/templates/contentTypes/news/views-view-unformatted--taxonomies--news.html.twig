@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+
+<article id="news-page">
+
+  <div class="tabs-container">
+    <div class="ui pointing secondary menu tab-menu">
+      <a class="item active" data-tab="all-news">{{ 'all news' | t }}</a>
+      {% for row in rows %}
+        <a class="item" data-tab="{{ row['content']['#row']._entity.getName() }}">{{ row['content']['#row']._entity.getName() | t }}</a>
+      {% endfor %}
+    </div>
+      <div class="ui bottom attached tab active" data-tab="all-news">
+          {{ drupal_view('news', 'all_news') }}
+      </div>
+      {% for row in rows %}
+        <div class="ui bottom attached tab" data-tab="{{ row['content']['#row']._entity.getName() }}">
+            {{ drupal_view('news', row['content']['#row']._entity.getName() | lower) }}
+        </div>
+      {% endfor %}
+  </div>
+
+</article>
+

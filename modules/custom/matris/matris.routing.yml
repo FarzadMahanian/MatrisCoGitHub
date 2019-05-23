@@ -1,0 +1,8 @@
+convert:
+    path: /matris/convert
+    defaults:
+        _controller: Drupal\matris\Controller\UserController::convertDB
+    requirements:
+        _permission: 'access content'
+    options:
+        no_cache: TRUE

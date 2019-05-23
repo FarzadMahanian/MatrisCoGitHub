@@ -1,0 +1,34 @@
+custom.mobile:
+  label: mobile
+  mediaQuery: 'all and (min-width: 375px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+custom.tablet:
+  label: tablet
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 2
+  multipliers:
+    - 1x
+
+custom.computer:
+  label: computer
+  mediaQuery: 'all and (min-width: 992px)'
+  weight: 3
+  multipliers:
+    - 1x
+
+custom.large:
+  label: large
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 4
+  multipliers:
+    - 1x
+
+custom.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 1920px)'
+  weight: 5
+  multipliers:
+    - 1x

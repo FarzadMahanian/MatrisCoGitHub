@@ -1,0 +1,15 @@
+<div class="ui stackable column grid row">
+    <div class="four wide column banner">
+        <a href="{{ url }}" rel="bookmark" title="{{ label|field_value[0]['#context'].value }}">
+            {{ content.field_image|field_value }}
+        </a>
+    </div>
+    <div class="twelve wide column content">
+        <h2 class="title"><a href="{{ url }}" rel="bookmark" title="{{ url }}">{{ label }}</a></h2>
+        <div>
+            <p>
+                {{ content.body|field_value }}
+            </p>
+        </div>
+    </div>
+</div>

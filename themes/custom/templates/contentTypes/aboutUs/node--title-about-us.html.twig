@@ -1,0 +1,44 @@
+<article id="about-us-page">
+
+    <div class="body-section content-container">
+        {{ content.body }}
+    </div>
+
+    {#<div class="branches-section content-container">#}
+        {#<h3 class="title page-title ui horizontal divider header">{{ 'branches' | t }}</h3>#}
+        {#{{ drupal_view('about_us', 'branches') }}#}
+        {#<div id="google-map" class="full-width"></div>#}
+    {#</div>#}
+
+
+    <div class="suppliers-section content-container">
+        <h3 class="title page-title ui horizontal divider header">{{ 'suppliers' | t }}</h3>
+        <div class="accordion">
+            {{ drupal_view('about_us', 'suppliers') }}
+        </div>
+    </div>
+
+    <div class="honors-section content-container">
+        <h3 class="title page-title ui horizontal divider header">{{ 'honors' | t }}</h3>
+        <div class="full-container">
+            <div class="ui container">
+                {{ drupal_view('about_us', 'honors') }}
+            </div>
+        </div>
+    </div>
+
+    <div class="catalogues-section content-container">
+        <h3 class="title page-title ui horizontal divider header">{{ 'catalogues' | t }}</h3>
+        <div class="accordion">
+            {{ drupal_view('about_us', 'catalogues') }}
+        </div>
+    </div>
+
+    <div class="gallery-section content-container">
+        <h3 class="title page-title ui horizontal divider header">{{ 'gallery' | t }}</h3>
+        <div class="accordion">
+            {{ drupal_view('gallery', 'block_1') }}
+        </div>
+    </div>
+
+</article>

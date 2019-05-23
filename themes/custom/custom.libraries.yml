@@ -1,0 +1,51 @@
+custom-header:
+    header: true
+    css:
+        theme:
+            app/fonts/fontello/css/animation.css: {}
+            app/fonts/fontello/css/fontello-codes.css: {}
+            app/fonts/fontello/css/fontello-embedded.css: {}
+            app/fonts/fontello/css/fontello-ie7-codes.css: {}
+            app/fonts/fontello/css/fontello-ie7.css: {}
+            app/fonts/fontello/css/fontello.css: {}
+            app/lib/slick-carousel/slick/slick.css: {}
+            app/lib/slick-carousel/slick/slick-theme.css: {}
+            app/assets/pace/themes/silver/pace-theme-center-atom.css: {}
+    js:
+        app/lib/slick-carousel/slick/slick.min.js: {}
+        app/lib/semantic/dist/semantic.min.js: {}
+        app/lib/gsap/src/minified/TweenMax.min.js: {}
+        app/lib/scrollmagic/scrollmagic/minified/ScrollMagic.min.js: {}
+        app/lib/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js: {}
+        app/lib/parallax.js/parallax.js: {}
+        node_modules/shufflejs/dist/shuffle.js: {}
+        app/assets/pace/pace.js: {}
+        app/js/base.js: {}
+    dependencies:
+        - core/jquery
+        - core/drupalSettings
+
+
+custom-theme:
+    css:
+        theme:
+            app/assets/css/semantic.min.css: {}
+            app/css/styles.css: {}
+    js:
+        app/js/main.js: {}
+    dependencies:
+        - core/jquery
+        - core/drupalSettings
+
+
+
+custom-theme-rtl:
+    css:
+        theme:
+            app/assets/css/semantic.min-rtl.css: {}
+            app/css/styles-rtl.css: {}
+    js:
+        app/js/main.js: {}
+    dependencies:
+        - core/jquery
+        - core/drupalSettings

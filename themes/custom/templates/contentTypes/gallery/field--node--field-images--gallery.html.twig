@@ -1,0 +1,15 @@
+{{ drupal_view('taxonomies', 'gallery') }}
+
+<div id="site-gallery" class="row ui stackable three column grid my-shuffle-container">
+    {% for item in items %}
+        {{ item.content }}
+    {% endfor %}
+    <div class="column three wide my-sizer-element"></div>
+</div>
+
+
+<div class="ui basic modal gallery">
+    <div class="content">
+
+    </div>
+</div>

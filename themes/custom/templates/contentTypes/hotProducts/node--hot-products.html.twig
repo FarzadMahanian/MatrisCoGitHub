@@ -1,0 +1,19 @@
+<div class="ui stackable four column grid">
+    <div class="two wide column"></div>
+    <div class="seven wide column hot-products-content">
+        <h2 class="title">
+            <a href="{{ node.field_link[0].url }}" title="{{ label|field_value[0]['#context'].value }}">
+                {{ label }}
+            </a>
+        </h2>
+        <div>
+            {{ content.body }}
+        </div>
+    </div>
+    <div class="five wide column hot-products-image">
+        <a href="{{ node.field_link[0].url }}" title="{{ label|field_value[0]['#context'].value }}">
+            {{ content.field_image|field_value }}
+        </a>
+    </div>
+    <div class="two wide column"></div>
+</div>

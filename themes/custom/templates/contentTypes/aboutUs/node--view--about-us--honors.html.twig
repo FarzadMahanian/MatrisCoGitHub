@@ -1,0 +1,15 @@
+<div class="honor">
+    <div class="image">
+        <a href="{{ file_url(node.field_logo.entity.fileuri) }}" target="_blank">
+            {{ content.field_logo|field_value }}
+        </a>
+    </div>
+    <div class="contents">
+        <div class="title">
+            {{ label }}
+        </div>
+        <div class="body">
+            {{ content.body|field_value }}
+        </div>
+    </div>
+</div>

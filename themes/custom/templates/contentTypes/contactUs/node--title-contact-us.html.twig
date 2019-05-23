@@ -1,0 +1,27 @@
+<article id="contact-us-page">
+
+
+    <div class="row">
+        <div class="ui stackable two column grid">
+            <div class="column">
+                <h2 class="title page-title">{{ 'intormation' | t }}</h2>
+                {{ content.body }}
+                <div class="social-links">
+                    {{ drupal_view('links', 'social_links') }}
+                </div>
+            </div>
+            <div class="column">
+                {{ drupal_block('contact_us') }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="branches-section content-container" style="margin: 0">
+            <h2 class="title page-title">{{ 'branches' | t }}</h2>
+            {{ drupal_view('about_us', 'branches') }}
+            <div id="google-map" class="full-width"></div>
+        </div>
+    </div>
+
+</article>
